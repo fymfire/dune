@@ -1,0 +1,12 @@
+-- Query to show wallets that sent at least 1 transaction on Ethereum mainnet
+SELECT
+  from_address AS wallet_address,
+  COUNT(*) AS transaction_count
+FROM
+  ethereum.transactions
+WHERE
+  network = 'mainnet'
+GROUP BY
+  from_address
+HAVING
+  COUNT(*) >= 1
