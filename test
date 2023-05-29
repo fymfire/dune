@@ -1,0 +1,7 @@
+-- Query to show wallets that claimed the Arbitrum airdrop
+SELECT
+  sender AS wallet_address
+FROM
+  <your_table_name>
+WHERE
+  <your_condition>
